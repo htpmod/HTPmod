@@ -1,10 +1,11 @@
 # HTPmod
 an R package for predicting plant biomass accumulation based on image-derived parameters
 
-## How to run
+## How to start
 ```
 Rscript run.R
 ```
+
 
 ## Reference: 
 Predicting plant biomass accumulation from image-derived parameters. 
