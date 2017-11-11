@@ -265,7 +265,6 @@ for(bio in c('FW', 'DW')){
 	plot.avg <- as.matrix(plot.avg[,-1])
 	plot.std <- as.matrix(plot.std[,-1])
 	ylim <- range(plot.avg)
-	ylim[2] <- max(ylim[2], max(ref.rmsre[, bio]), na.rm=TRUE) 
 	ylim[1] <- 0
 	ylim[2] <- ylim[2]+max(plot.std)*1.1
 	barx <- barplot(plot.avg, ylim=ylim, beside=TRUE, col=model.cols[rownames(plot.avg)], main=paste("Evaluation based on", bio), ylab="RMSRE", xpd=FALSE, border=NA)
