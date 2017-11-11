@@ -13,7 +13,7 @@ The files included in this distribution are as follows:
 * data: directory containing test data
 * run.R: script used to analyze data and generate figures 
 * pca.plot.R: use to generate PCA plots
-* my.code.R: R functions required for run.R 
+* my.code.R: R functions required to run "run.R"
 
 ## Reference: 
 Predicting plant biomass accumulation from image-derived parameters. 
