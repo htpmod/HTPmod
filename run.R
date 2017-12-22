@@ -4,9 +4,16 @@
 ################################################
 ## install required R packages
 pks <- c('ade4','reshape2','fmsb','klaR','gplots','outliers','ape','glmnet','randomGLM','randomForest','nnet','rpart','gbm','plotrix','relaimpo','RColorBrewer')
-install.packages(pks)
-source("https://bioconductor.org/biocLite.R")
-biocLite("pcaMethods")
+for(x in pks){
+	if(!suppressMessages(require(x, character.only=T, quietly=T, warn.conflicts=F))){
+		install.packages(x, repos='http://cran.rstudio.com/')
+		require(x, character.only=T, quietly=T)
+        }
+}
+if(!suppressMessages(require('pcaMethods', quietly=T, warn.conflicts=F))){
+	source("https://bioconductor.org/biocLite.R")
+	biocLite("pcaMethods")
+}
 
 ## create workspace
 if(!dir.exists('figures')){
