@@ -219,7 +219,7 @@ relweights <- function(fit, plot=FALSE, ...){
 
 ## multivariate linear regression
 ml.regression <- function(train.x, train.y, test.x=NULL, evaluation=TRUE, ...){
-	train <- cbind(y=train.y, train.x)
+	train <- data.frame(y=train.y, train.x)
 	formula <- paste('y~', paste(colnames(train.x), collapse='+'))
 	## build a multivariate linear model
 	lm.model <- lm(formula, data=train)
@@ -350,7 +350,7 @@ evaluation.criteria <- function(observed, predicted) {
 prediction.model <- function(model, testset) {
 	testdata <- testset[,-1]
 	if(is.null(dim(testdata))){
-		testdata <- as.matrix(testdata)
+		testdata <- as.data.frame(testdata)
 		colnames(testdata) <- colnames(testset)[-1]
 	}
 	if(any('elnet' %in% class(model)) || any('glmnet' %in% class(model))){
@@ -390,7 +390,7 @@ regression.cross.validation <- function(Data, nfold=10, model="svm.regression"){
 		trainset <- Data[-sample.ids, ]
 		traindata <- trainset[,-1]
 		if(is.null(dim(traindata))){
-			traindata <- as.matrix(traindata)
+			traindata <- as.data.frame(traindata)
 			colnames(traindata) <- colnames(Data)[-1]
 		}
 		myTry <- try(modelfunc(traindata, trainset[,1], evaluation=FALSE), silent=TRUE)
