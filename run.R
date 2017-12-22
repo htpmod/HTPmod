@@ -2,12 +2,13 @@
 # Author: Dijun Chen (chendijun2012@gmail.com)
 # Update on Mar. 12, 2015
 ################################################
+## install required R packages
 pks <- c('ade4','reshape2','fmsb','klaR','gplots','outliers','ape','glmnet','randomGLM','randomForest','nnet','rpart','gbm','plotrix','relaimpo','RColorBrewer')
-## install.packages(pks)
-## source("https://bioconductor.org/biocLite.R")
-## biocLite("pcaMethods")
+install.packages(pks)
+source("https://bioconductor.org/biocLite.R")
+biocLite("pcaMethods")
 
-
+## create workspace
 if(!dir.exists('figures')){
 	dir.create('figures')
 }
