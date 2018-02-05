@@ -17,5 +17,5 @@ The files included in this distribution are as follows:
 
 ## Reference: 
 Predicting plant biomass accumulation from image-derived parameters. 
-Dijun Chen, Rongli Shi, Jean-Michel Pape, Christian Klukas
+Dijun Chen, Rongli Shi, Jean-Michel Pape, Kerstin Neumann, Daniel Arend, Andreas Graner, Ming Chen, and Christian Klukas
 doi: https://doi.org/10.1093/gigascience/giy001
